@@ -1,0 +1,994 @@
+C�digo Postal,Munic�pio,Distrito
+7750-104,M�rtola,Beja
+8005-073,Faro,Faro
+8000-136,Faro,Faro
+8005-072,Faro,Faro
+8600-269,Lagos,Faro
+8600-265,Lagos,Faro
+8125-161,Loul�,Faro
+8700-229,Olh�o,Faro
+8365-000,Silves,Faro
+8800-436,Tavira,Faro
+8800-465,Tavira,Faro
+8500-295,Portim�o,Faro
+8900-489,Vila Real de Santo Ant�nio,Faro
+4700-761,Braga,Braga
+4815-766,Guimar�es,Braga
+4740-307,Esposende,Braga
+4810-082,Guimar�es,Braga
+7200-490,Reguengos de Monsaraz,�vora
+4425-244,Maia,Porto
+4425-299,Maia,Porto
+4475-316,Maia,Porto
+4100-467,Porto,Porto
+4150-073,Porto,Porto
+4580-384,Paredes,Porto
+4585-942,Paredes,Porto
+4585-029,Paredes,Porto
+4580-639,Paredes,Porto
+4585-921,Paredes,Porto
+4420-630,Gondomar,Porto
+4435-064,Gondomar,Porto
+4450-716,Matosinhos,Porto
+4460-757,Matosinhos,Porto
+4460-092,Matosinhos,Porto
+4450-169,Matosinhos,Porto
+4450-450,Matosinhos,Porto
+4450-397,Matosinhos,Porto
+4455-160,Matosinhos,Porto
+4450-409,Matosinhos,Porto
+4485-967,Vila do Conde,Porto
+4415-567,Vila Nova de Gaia,Porto
+4413-302,Vila Nova de Gaia,Porto
+4430-634,Vila Nova de Gaia,Porto
+4415-568,Vila Nova de Gaia,Porto
+4400-719,Vila Nova de Gaia,Porto
+4630-211,Marco de Canaveses,Porto
+3515-475,Viseu,Viseu
+3510-215,Viseu,Viseu
+3515-386,Viseu,Viseu
+3500-462,Viseu,Viseu
+5100-207,Lamego,Viseu
+3610-168,Tarouca,Viseu
+3840-222,Vagos,Aveiro
+3750-839,�gueda,Aveiro
+3800-278,Aveiro,Aveiro
+3800-825,Aveiro,Aveiro
+3720-000,Oliveira de Azem�is,Aveiro
+3720-924,Oliveira de Azem�is,Aveiro
+3700-010,S�o Jo�o da Madeira,Aveiro
+4520-555,Santa Maria da Feira,Aveiro
+4535-196,Santa Maria da Feira,Aveiro
+4535-062,Santa Maria da Feira,Aveiro
+6300-340,Guarda,Guarda
+3105-561,Pombal,Leiria
+3100-130,Pombal,Leiria
+2640-585,Mafra,Lisboa
+2655-505,Mafra,Lisboa
+1950-422,Lisboa,Lisboa
+1950-418,Lisboa,Lisboa
+1950-017,Lisboa,Lisboa
+1990-080,Lisboa,Lisboa
+1750-491,Lisboa,Lisboa
+1600-369,Lisboa,Lisboa
+2670-402,Loures,Lisboa
+1990-105,Lisboa,Lisboa
+2745-376,Sintra,Lisboa
+2715-147,Sintra,Lisboa
+2720-754,Amadora,Lisboa
+2720-824,Amadora,Lisboa
+2720-823,Amadora,Lisboa
+1685-555,Odivelas,Lisboa
+2675-223,Odivelas,Lisboa
+2600-407,Vila Franca de Xira,Lisboa
+2625-736,Vila Franca de Xira,Lisboa
+3150-350,Condeixa-a-Nova,Coimbra
+3045-530,Coimbra,Coimbra
+3045-000,Coimbra,Coimbra
+3040-031,Coimbra,Coimbra
+3030-770,Coimbra,Coimbra
+3060-356,Cantanhede,Coimbra
+5300-000,Bragan�a,Bragan�a
+5180-182,Freixo de Espada � Cinta,Bragan�a
+9760-025,Praia da Vit�ria,Ilha Terceira
+9760-035,Praia da Vit�ria,Ilha Terceira
+9760-032,Praia da Vit�ria,Ilha Terceira
+9760-023,Praia da Vit�ria,Ilha Terceira
+9760-028,Praia da Vit�ria,Ilha Terceira
+9760-031,Praia da Vit�ria,Ilha Terceira
+9760-014,Praia da Vit�ria,Ilha Terceira
+9760-017,Praia da Vit�ria,Ilha Terceira
+9760-011,Praia da Vit�ria,Ilha Terceira
+9760-039,Praia da Vit�ria,Ilha Terceira
+9760-016,Praia da Vit�ria,Ilha Terceira
+9760-024,Praia da Vit�ria,Ilha Terceira
+9760-033,Praia da Vit�ria,Ilha Terceira
+9760-251,Praia da Vit�ria,Ilha Terceira
+9760-038,Praia da Vit�ria,Ilha Terceira
+9760-029,Praia da Vit�ria,Ilha Terceira
+9760-030,Praia da Vit�ria,Ilha Terceira
+9760-099,Praia da Vit�ria,Ilha Terceira
+9760-026,Praia da Vit�ria,Ilha Terceira
+9760-018,Praia da Vit�ria,Ilha Terceira
+9760-021,Praia da Vit�ria,Ilha Terceira
+9760-036,Praia da Vit�ria,Ilha Terceira
+9700-086,Angra do Hero�smo,Ilha Terceira
+9760-020,Praia da Vit�ria,Ilha Terceira
+9700-042,Angra do Hero�smo,Ilha Terceira
+9700-099,Angra do Hero�smo,Ilha Terceira
+9700-072,Angra do Hero�smo,Ilha Terceira
+9700-020,Angra do Hero�smo,Ilha Terceira
+9700-039,Angra do Hero�smo,Ilha Terceira
+9700-050,Angra do Hero�smo,Ilha Terceira
+9700-065,Angra do Hero�smo,Ilha Terceira
+9700-053,Angra do Hero�smo,Ilha Terceira
+9700-019,Angra do Hero�smo,Ilha Terceira
+9700-044,Angra do Hero�smo,Ilha Terceira
+9700-070,Angra do Hero�smo,Ilha Terceira
+9700-096,Angra do Hero�smo,Ilha Terceira
+9700-016,Angra do Hero�smo,Ilha Terceira
+9700-059,Angra do Hero�smo,Ilha Terceira
+9700-015,Angra do Hero�smo,Ilha Terceira
+9700-088,Angra do Hero�smo,Ilha Terceira
+9700-085,Angra do Hero�smo,Ilha Terceira
+9700-012,Angra do Hero�smo,Ilha Terceira
+9700-026,Angra do Hero�smo,Ilha Terceira
+9700-009,Angra do Hero�smo,Ilha Terceira
+9700-081,Angra do Hero�smo,Ilha Terceira
+9700-066,Angra do Hero�smo,Ilha Terceira
+9700-017,Angra do Hero�smo,Ilha Terceira
+9700-040,Angra do Hero�smo,Ilha Terceira
+9700-077,Angra do Hero�smo,Ilha Terceira
+9700-022,Angra do Hero�smo,Ilha Terceira
+9700-080,Angra do Hero�smo,Ilha Terceira
+9700-069,Angra do Hero�smo,Ilha Terceira
+9700-041,Angra do Hero�smo,Ilha Terceira
+9700-043,Angra do Hero�smo,Ilha Terceira
+9700-051,Angra do Hero�smo,Ilha Terceira
+9700-061,Angra do Hero�smo,Ilha Terceira
+9700-073,Angra do Hero�smo,Ilha Terceira
+9700-055,Angra do Hero�smo,Ilha Terceira
+9700-092,Angra do Hero�smo,Ilha Terceira
+9700-023,Angra do Hero�smo,Ilha Terceira
+9700-087,Angra do Hero�smo,Ilha Terceira
+9700-097,Angra do Hero�smo,Ilha Terceira
+9700-079,Angra do Hero�smo,Ilha Terceira
+9700-062,Angra do Hero�smo,Ilha Terceira
+9700-091,Angra do Hero�smo,Ilha Terceira
+9700-011,Angra do Hero�smo,Ilha Terceira
+9700-014,Angra do Hero�smo,Ilha Terceira
+9700-094,Angra do Hero�smo,Ilha Terceira
+9700-078,Angra do Hero�smo,Ilha Terceira
+9700-046,Angra do Hero�smo,Ilha Terceira
+9700-052,Angra do Hero�smo,Ilha Terceira
+9700-027,Angra do Hero�smo,Ilha Terceira
+9700-025,Angra do Hero�smo,Ilha Terceira
+9700-054,Angra do Hero�smo,Ilha Terceira
+9700-093,Angra do Hero�smo,Ilha Terceira
+9700-028,Angra do Hero�smo,Ilha Terceira
+9700-068,Angra do Hero�smo,Ilha Terceira
+9700-037,Angra do Hero�smo,Ilha Terceira
+9700-049,Angra do Hero�smo,Ilha Terceira
+9700-024,Angra do Hero�smo,Ilha Terceira
+9700-089,Angra do Hero�smo,Ilha Terceira
+9700-029,Angra do Hero�smo,Ilha Terceira
+9700-064,Angra do Hero�smo,Ilha Terceira
+9700-058,Angra do Hero�smo,Ilha Terceira
+9700-075,Angra do Hero�smo,Ilha Terceira
+9700-032,Angra do Hero�smo,Ilha Terceira
+9700-038,Angra do Hero�smo,Ilha Terceira
+9700-035,Angra do Hero�smo,Ilha Terceira
+9700-045,Angra do Hero�smo,Ilha Terceira
+9700-047,Angra do Hero�smo,Ilha Terceira
+9700-056,Angra do Hero�smo,Ilha Terceira
+9700-098,Angra do Hero�smo,Ilha Terceira
+9700-030,Angra do Hero�smo,Ilha Terceira
+9900-070,Horta,Ilha do Faial
+9900-099,Horta,Ilha do Faial
+9900-039,Horta,Ilha do Faial
+9900-018,Horta,Ilha do Faial
+9900-078,Horta,Ilha do Faial
+9900-066,Horta,Ilha do Faial
+9900-091,Horta,Ilha do Faial
+9900-016,Horta,Ilha do Faial
+9900-020,Horta,Ilha do Faial
+9900-084,Horta,Ilha do Faial
+9900-082,Horta,Ilha do Faial
+9900-053,Horta,Ilha do Faial
+9900-069,Horta,Ilha do Faial
+9900-024,Horta,Ilha do Faial
+9900-083,Horta,Ilha do Faial
+9900-028,Horta,Ilha do Faial
+9900-074,Horta,Ilha do Faial
+9900-086,Horta,Ilha do Faial
+9900-038,Horta,Ilha do Faial
+9900-046,Horta,Ilha do Faial
+9900-031,Horta,Ilha do Faial
+9900-071,Horta,Ilha do Faial
+9900-017,Horta,Ilha do Faial
+9900-058,Horta,Ilha do Faial
+9900-019,Horta,Ilha do Faial
+9900-023,Horta,Ilha do Faial
+9900-076,Horta,Ilha do Faial
+9900-050,Horta,Ilha do Faial
+9900-065,Horta,Ilha do Faial
+9900-081,Horta,Ilha do Faial
+9900-077,Horta,Ilha do Faial
+9900-062,Horta,Ilha do Faial
+9900-021,Horta,Ilha do Faial
+9900-011,Horta,Ilha do Faial
+9900-085,Horta,Ilha do Faial
+9900-094,Horta,Ilha do Faial
+9900-045,Horta,Ilha do Faial
+9900-056,Horta,Ilha do Faial
+9900-064,Horta,Ilha do Faial
+9900-089,Horta,Ilha do Faial
+9900-026,Horta,Ilha do Faial
+9900-027,Horta,Ilha do Faial
+9900-059,Horta,Ilha do Faial
+9900-013,Horta,Ilha do Faial
+9900-080,Horta,Ilha do Faial
+9900-057,Horta,Ilha do Faial
+9900-097,Horta,Ilha do Faial
+9900-063,Horta,Ilha do Faial
+9900-095,Horta,Ilha do Faial
+9900-075,Horta,Ilha do Faial
+9900-015,Horta,Ilha do Faial
+9900-014,Horta,Ilha do Faial
+9900-093,Horta,Ilha do Faial
+9900-052,Horta,Ilha do Faial
+9900-098,Horta,Ilha do Faial
+6200-251,Covilh�,Castelo Branco
+6200-876,Covilh�,Castelo Branco
+6200-875,Covilh�,Castelo Branco
+6000-781,Castelo Branco,Castelo Branco
+9000-176,Funchal,Ilha da Madeira
+9000-150,Funchal,Ilha da Madeira
+9000-198,Funchal,Ilha da Madeira
+9000-268,Funchal,Ilha da Madeira
+9000-783,Funchal,Ilha da Madeira
+9020-021,Funchal,Ilha da Madeira
+9000-605,Funchal,Ilha da Madeira
+9000-180,Funchal,Ilha da Madeira
+9000-073,Funchal,Ilha da Madeira
+9050-450,Funchal,Ilha da Madeira
+9060-300,Funchal,Ilha da Madeira
+9000-260,Funchal,Ilha da Madeira
+9000-634,Funchal,Ilha da Madeira
+9050-059,Funchal,Ilha da Madeira
+9020-086,Funchal,Ilha da Madeira
+9000-769,Funchal,Ilha da Madeira
+9000-029,Funchal,Ilha da Madeira
+9050-225,Funchal,Ilha da Madeira
+9000-223,Funchal,Ilha da Madeira
+9020-111,Funchal,Ilha da Madeira
+9000-136,Funchal,Ilha da Madeira
+9000-058,Funchal,Ilha da Madeira
+9000-621,Funchal,Ilha da Madeira
+9050-075,Funchal,Ilha da Madeira
+9020-245,Funchal,Ilha da Madeira
+9020-402,Funchal,Ilha da Madeira
+9020-416,Funchal,Ilha da Madeira
+9000-115,Funchal,Ilha da Madeira
+9000-679,Funchal,Ilha da Madeira
+9000-264,Funchal,Ilha da Madeira
+9000-705,Funchal,Ilha da Madeira
+9020-047,Funchal,Ilha da Madeira
+9000-779,Funchal,Ilha da Madeira
+9000-191,Funchal,Ilha da Madeira
+9020-396,Funchal,Ilha da Madeira
+9000-771,Funchal,Ilha da Madeira
+9000-683,Funchal,Ilha da Madeira
+9000-098,Funchal,Ilha da Madeira
+9000-243,Funchal,Ilha da Madeira
+9020-223,Funchal,Ilha da Madeira
+9020-261,Funchal,Ilha da Madeira
+9000-247,Funchal,Ilha da Madeira
+9050-457,Funchal,Ilha da Madeira
+9000-031,Funchal,Ilha da Madeira
+9000-604,Funchal,Ilha da Madeira
+9050-021,Funchal,Ilha da Madeira
+9000-025,Funchal,Ilha da Madeira
+9000-003,Funchal,Ilha da Madeira
+9000-269,Funchal,Ilha da Madeira
+9000-737,Funchal,Ilha da Madeira
+9020-393,Funchal,Ilha da Madeira
+9000-664,Funchal,Ilha da Madeira
+9000-682,Funchal,Ilha da Madeira
+9000-222,Funchal,Ilha da Madeira
+9000-183,Funchal,Ilha da Madeira
+9050-025,Funchal,Ilha da Madeira
+9000-215,Funchal,Ilha da Madeira
+9020-323,Funchal,Ilha da Madeira
+9000-241,Funchal,Ilha da Madeira
+9000-044,Funchal,Ilha da Madeira
+9000-637,Funchal,Ilha da Madeira
+9020-412,Funchal,Ilha da Madeira
+9000-169,Funchal,Ilha da Madeira
+9000-161,Funchal,Ilha da Madeira
+9000-217,Funchal,Ilha da Madeira
+9004-509,Funchal,Ilha da Madeira
+9000-199,Funchal,Ilha da Madeira
+9020-071,Funchal,Ilha da Madeira
+9000-256,Funchal,Ilha da Madeira
+9000-103,Funchal,Ilha da Madeira
+9020-002,Funchal,Ilha da Madeira
+9000-177,Funchal,Ilha da Madeira
+9050-234,Funchal,Ilha da Madeira
+9000-685,Funchal,Ilha da Madeira
+9000-202,Funchal,Ilha da Madeira
+9000-738,Funchal,Ilha da Madeira
+9020-117,Funchal,Ilha da Madeira
+9000-087,Funchal,Ilha da Madeira
+9000-062,Funchal,Ilha da Madeira
+9020-209,Funchal,Ilha da Madeira
+9000-200,Funchal,Ilha da Madeira
+9050-071,Funchal,Ilha da Madeira
+9000-775,Funchal,Ilha da Madeira
+9020-417,Funchal,Ilha da Madeira
+9020-165,Funchal,Ilha da Madeira
+9050-079,Funchal,Ilha da Madeira
+9000-665,Funchal,Ilha da Madeira
+9020-095,Funchal,Ilha da Madeira
+9000-074,Funchal,Ilha da Madeira
+9000-606,Funchal,Ilha da Madeira
+9000-056,Funchal,Ilha da Madeira
+9000-179,Funchal,Ilha da Madeira
+9000-164,Funchal,Ilha da Madeira
+9000-622,Funchal,Ilha da Madeira
+9000-140,Funchal,Ilha da Madeira
+9050-011,Funchal,Ilha da Madeira
+9020-024,Funchal,Ilha da Madeira
+9020-283,Funchal,Ilha da Madeira
+9020-262,Funchal,Ilha da Madeira
+9000-079,Funchal,Ilha da Madeira
+9000-189,Funchal,Ilha da Madeira
+9020-064,Funchal,Ilha da Madeira
+9000-123,Funchal,Ilha da Madeira
+9000-120,Funchal,Ilha da Madeira
+9050-019,Funchal,Ilha da Madeira
+9000-046,Funchal,Ilha da Madeira
+9000-777,Funchal,Ilha da Madeira
+9000-764,Funchal,Ilha da Madeira
+9000-768,Funchal,Ilha da Madeira
+9000-638,Funchal,Ilha da Madeira
+9020-381,Funchal,Ilha da Madeira
+9000-030,Funchal,Ilha da Madeira
+9000-143,Funchal,Ilha da Madeira
+9004-527,Funchal,Ilha da Madeira
+9060-137,Funchal,Ilha da Madeira
+9000-049,Funchal,Ilha da Madeira
+9000-032,Funchal,Ilha da Madeira
+9004-541,Funchal,Ilha da Madeira
+9000-110,Funchal,Ilha da Madeira
+9020-012,Funchal,Ilha da Madeira
+9060-073,Funchal,Ilha da Madeira
+9020-135,Funchal,Ilha da Madeira
+9000-204,Funchal,Ilha da Madeira
+9000-060,Funchal,Ilha da Madeira
+9050-051,Funchal,Ilha da Madeira
+9000-205,Funchal,Ilha da Madeira
+9000-072,Funchal,Ilha da Madeira
+9050-015,Funchal,Ilha da Madeira
+9050-046,Funchal,Ilha da Madeira
+9000-149,Funchal,Ilha da Madeira
+9050-023,Funchal,Ilha da Madeira
+9004-520,Funchal,Ilha da Madeira
+9020-158,Funchal,Ilha da Madeira
+9000-013,Funchal,Ilha da Madeira
+9000-089,Funchal,Ilha da Madeira
+9050-067,Funchal,Ilha da Madeira
+9000-021,Funchal,Ilha da Madeira
+9050-068,Funchal,Ilha da Madeira
+9020-045,Funchal,Ilha da Madeira
+9000-040,Funchal,Ilha da Madeira
+9000-036,Funchal,Ilha da Madeira
+9000-084,Funchal,Ilha da Madeira
+9000-067,Funchal,Ilha da Madeira
+9000-696,Funchal,Ilha da Madeira
+9000-720,Funchal,Ilha da Madeira
+9050-027,Funchal,Ilha da Madeira
+9020-330,Funchal,Ilha da Madeira
+9020-034,Funchal,Ilha da Madeira
+9000-708,Funchal,Ilha da Madeira
+9020-032,Funchal,Ilha da Madeira
+9000-184,Funchal,Ilha da Madeira
+9050-062,Funchal,Ilha da Madeira
+9000-616,Funchal,Ilha da Madeira
+9050-020,Funchal,Ilha da Madeira
+9000-684,Funchal,Ilha da Madeira
+9050-445,Funchal,Ilha da Madeira
+9000-649,Funchal,Ilha da Madeira
+9000-005,Funchal,Ilha da Madeira
+9000-612,Funchal,Ilha da Madeira
+9000-680,Funchal,Ilha da Madeira
+9000-068,Funchal,Ilha da Madeira
+9020-105,Funchal,Ilha da Madeira
+9000-246,Funchal,Ilha da Madeira
+9050-070,Funchal,Ilha da Madeira
+9000-083,Funchal,Ilha da Madeira
+9050-053,Funchal,Ilha da Madeira
+9020-316,Funchal,Ilha da Madeira
+9020-123,Funchal,Ilha da Madeira
+9000-645,Funchal,Ilha da Madeira
+9020-415,Funchal,Ilha da Madeira
+9050-401,Funchal,Ilha da Madeira
+9000-614,Funchal,Ilha da Madeira
+9000-042,Funchal,Ilha da Madeira
+9000-045,Funchal,Ilha da Madeira
+9000-749,Funchal,Ilha da Madeira
+9050-047,Funchal,Ilha da Madeira
+9000-034,Funchal,Ilha da Madeira
+9004-512,Funchal,Ilha da Madeira
+9050-024,Funchal,Ilha da Madeira
+9000-057,Funchal,Ilha da Madeira
+9000-267,Funchal,Ilha da Madeira
+9020-015,Funchal,Ilha da Madeira
+9000-018,Funchal,Ilha da Madeira
+9000-026,Funchal,Ilha da Madeira
+9000-075,Funchal,Ilha da Madeira
+9000-747,Funchal,Ilha da Madeira
+9060-160,Funchal,Ilha da Madeira
+9000-265,Funchal,Ilha da Madeira
+9000-669,Funchal,Ilha da Madeira
+9020-187,Funchal,Ilha da Madeira
+9000-047,Funchal,Ilha da Madeira
+9060-011,Funchal,Ilha da Madeira
+9050-489,Funchal,Ilha da Madeira
+9000-043,Funchal,Ilha da Madeira
+9000-190,Funchal,Ilha da Madeira
+9050-080,Funchal,Ilha da Madeira
+9000-742,Funchal,Ilha da Madeira
+9004-524,Funchal,Ilha da Madeira
+9000-144,Funchal,Ilha da Madeira
+9000-743,Funchal,Ilha da Madeira
+9060-194,Funchal,Ilha da Madeira
+9000-206,Funchal,Ilha da Madeira
+9000-016,Funchal,Ilha da Madeira
+9020-409,Funchal,Ilha da Madeira
+9000-727,Funchal,Ilha da Madeira
+9000-736,Funchal,Ilha da Madeira
+9050-069,Funchal,Ilha da Madeira
+9000-160,Funchal,Ilha da Madeira
+9000-192,Funchal,Ilha da Madeira
+9050-328,Funchal,Ilha da Madeira
+9000-782,Funchal,Ilha da Madeira
+9000-628,Funchal,Ilha da Madeira
+9000-171,Funchal,Ilha da Madeira
+9004-537,Funchal,Ilha da Madeira
+9000-082,Funchal,Ilha da Madeira
+9000-061,Funchal,Ilha da Madeira
+9000-663,Funchal,Ilha da Madeira
+9000-015,Funchal,Ilha da Madeira
+9050-440,Funchal,Ilha da Madeira
+9000-216,Funchal,Ilha da Madeira
+9000-208,Funchal,Ilha da Madeira
+9020-040,Funchal,Ilha da Madeira
+9000-759,Funchal,Ilha da Madeira
+9000-153,Funchal,Ilha da Madeira
+9000-162,Funchal,Ilha da Madeira
+9020-102,Funchal,Ilha da Madeira
+9000-500,Funchal,Ilha da Madeira
+9000-187,Funchal,Ilha da Madeira
+9000-113,Funchal,Ilha da Madeira
+9000-266,Funchal,Ilha da Madeira
+9000-012,Funchal,Ilha da Madeira
+9000-168,Funchal,Ilha da Madeira
+9000-039,Funchal,Ilha da Madeira
+9050-026,Funchal,Ilha da Madeira
+9000-145,Funchal,Ilha da Madeira
+9020-130,Funchal,Ilha da Madeira
+9000-735,Funchal,Ilha da Madeira
+9000-105,Funchal,Ilha da Madeira
+9000-716,Funchal,Ilha da Madeira
+9000-221,Funchal,Ilha da Madeira
+9000-756,Funchal,Ilha da Madeira
+9020-072,Funchal,Ilha da Madeira
+9000-116,Funchal,Ilha da Madeira
+9000-019,Funchal,Ilha da Madeira
+9000-070,Funchal,Ilha da Madeira
+9050-048,Funchal,Ilha da Madeira
+9000-248,Funchal,Ilha da Madeira
+9020-329,Funchal,Ilha da Madeira
+9020-001,Funchal,Ilha da Madeira
+9050-206,Funchal,Ilha da Madeira
+9000-213,Funchal,Ilha da Madeira
+9050-447,Funchal,Ilha da Madeira
+9000-048,Funchal,Ilha da Madeira
+9020-198,Funchal,Ilha da Madeira
+9000-038,Funchal,Ilha da Madeira
+9020-062,Funchal,Ilha da Madeira
+9000-088,Funchal,Ilha da Madeira
+9000-767,Funchal,Ilha da Madeira
+9000-776,Funchal,Ilha da Madeira
+9000-020,Funchal,Ilha da Madeira
+9000-250,Funchal,Ilha da Madeira
+9000-000,Funchal,Ilha da Madeira
+9000-167,Funchal,Ilha da Madeira
+9000-154,Funchal,Ilha da Madeira
+9000-643,Funchal,Ilha da Madeira
+9050-064,Funchal,Ilha da Madeira
+9000-641,Funchal,Ilha da Madeira
+9000-174,Funchal,Ilha da Madeira
+9000-166,Funchal,Ilha da Madeira
+9000-100,Funchal,Ilha da Madeira
+9000-059,Funchal,Ilha da Madeira
+9000-170,Funchal,Ilha da Madeira
+9020-411,Funchal,Ilha da Madeira
+9000-064,Funchal,Ilha da Madeira
+9000-080,Funchal,Ilha da Madeira
+9050-555,Funchal,Ilha da Madeira
+9060-380,Funchal,Ilha da Madeira
+9050-052,Funchal,Ilha da Madeira
+9020-176,Funchal,Ilha da Madeira
+9000-141,Funchal,Ilha da Madeira
+9000-050,Funchal,Ilha da Madeira
+9000-111,Funchal,Ilha da Madeira
+9000-690,Funchal,Ilha da Madeira
+9000-017,Funchal,Ilha da Madeira
+9060-271,Funchal,Ilha da Madeira
+9000-028,Funchal,Ilha da Madeira
+9000-273,Funchal,Ilha da Madeira
+9200-216,Machico,Ilha da Madeira
+9200-201,Machico,Ilha da Madeira
+9200-134,Machico,Ilha da Madeira
+9225-050,Machico,Ilha da Madeira
+9200-112,Machico,Ilha da Madeira
+9200-032,Machico,Ilha da Madeira
+9200-209,Machico,Ilha da Madeira
+9100-146,Santa Cruz,Ilha da Madeira
+9100-156,Santa Cruz,Ilha da Madeira
+9100-180,Santa Cruz,Ilha da Madeira
+9135-430,Santa Cruz,Ilha da Madeira
+9360-516,Ponta do Sol,Ilha da Madeira
+9360-559,Ponta do Sol,Ilha da Madeira
+9360-544,Ponta do Sol,Ilha da Madeira
+9360-561,Ponta do Sol,Ilha da Madeira
+9360-523,Ponta do Sol,Ilha da Madeira
+9360-543,Ponta do Sol,Ilha da Madeira
+9240-019,S�o Vicente,Ilha da Madeira
+9240-108,S�o Vicente,Ilha da Madeira
+9240-217,S�o Vicente,Ilha da Madeira
+9240-020,S�o Vicente,Ilha da Madeira
+9240-215,S�o Vicente,Ilha da Madeira
+9240-216,S�o Vicente,Ilha da Madeira
+9240-222,S�o Vicente,Ilha da Madeira
+9350-146,Ribeira Brava,Ilha da Madeira
+9350-416,Ribeira Brava,Ilha da Madeira
+9350-419,Ribeira Brava,Ilha da Madeira
+9350-091,Ribeira Brava,Ilha da Madeira
+9300-029,C�mara de Lobos,Ilha da Madeira
+9325-052,C�mara de Lobos,Ilha da Madeira
+9300-091,C�mara de Lobos,Ilha da Madeira
+9300-092,C�mara de Lobos,Ilha da Madeira
+9300-306,C�mara de Lobos,Ilha da Madeira
+9300-006,C�mara de Lobos,Ilha da Madeira
+9325-331,C�mara de Lobos,Ilha da Madeira
+9300-303,C�mara de Lobos,Ilha da Madeira
+9300-076,C�mara de Lobos,Ilha da Madeira
+9300-167,C�mara de Lobos,Ilha da Madeira
+9300-161,C�mara de Lobos,Ilha da Madeira
+9300-004,C�mara de Lobos,Ilha da Madeira
+9300-155,C�mara de Lobos,Ilha da Madeira
+9300-090,C�mara de Lobos,Ilha da Madeira
+9300-166,C�mara de Lobos,Ilha da Madeira
+9370-572,Calheta,Ilha da Madeira
+9370-175,Calheta,Ilha da Madeira
+9370-057,Calheta,Ilha da Madeira
+9370-264,Calheta,Ilha da Madeira
+9370-620,Calheta,Ilha da Madeira
+9370-711,Calheta,Ilha da Madeira
+9370-715,Calheta,Ilha da Madeira
+9370-048,Calheta,Ilha da Madeira
+9370-075,Calheta,Ilha da Madeira
+9370-275,Calheta,Ilha da Madeira
+9370-765,Calheta,Ilha da Madeira
+9370-644,Calheta,Ilha da Madeira
+9370-136,Calheta,Ilha da Madeira
+9370-635,Calheta,Ilha da Madeira
+9370-731,Calheta,Ilha da Madeira
+9370-079,Calheta,Ilha da Madeira
+9370-611,Calheta,Ilha da Madeira
+9370-090,Calheta,Ilha da Madeira
+9370-581,Calheta,Ilha da Madeira
+9370-139,Calheta,Ilha da Madeira
+9370-705,Calheta,Ilha da Madeira
+9370-640,Calheta,Ilha da Madeira
+4930-304,Valen�a,Viana do Castelo
+4970-515,Arcos de Valdevez,Viana do Castelo
+9400-075,Porto Santo,Ilha de Porto Santo
+9400-198,Porto Santo,Ilha de Porto Santo
+9400-139,Porto Santo,Ilha de Porto Santo
+9400-230,Porto Santo,Ilha de Porto Santo
+9400-132,Porto Santo,Ilha de Porto Santo
+9400-140,Porto Santo,Ilha de Porto Santo
+9400-060,Porto Santo,Ilha de Porto Santo
+9400-172,Porto Santo,Ilha de Porto Santo
+9400-035,Porto Santo,Ilha de Porto Santo
+9400-192,Porto Santo,Ilha de Porto Santo
+9400-200,Porto Santo,Ilha de Porto Santo
+9400-131,Porto Santo,Ilha de Porto Santo
+9400-210,Porto Santo,Ilha de Porto Santo
+9400-133,Porto Santo,Ilha de Porto Santo
+9400-085,Porto Santo,Ilha de Porto Santo
+9400-155,Porto Santo,Ilha de Porto Santo
+9400-199,Porto Santo,Ilha de Porto Santo
+9400-010,Porto Santo,Ilha de Porto Santo
+9400-242,Porto Santo,Ilha de Porto Santo
+9400-197,Porto Santo,Ilha de Porto Santo
+9400-159,Porto Santo,Ilha de Porto Santo
+9400-212,Porto Santo,Ilha de Porto Santo
+9400-181,Porto Santo,Ilha de Porto Santo
+9400-162,Porto Santo,Ilha de Porto Santo
+9400-213,Porto Santo,Ilha de Porto Santo
+9675-061,Povoa��o,Ilha de S�o Miguel
+9675-022,Povoa��o,Ilha de S�o Miguel
+9500-087,Ponta Delgada,Ilha de S�o Miguel
+9555-066,Ponta Delgada,Ilha de S�o Miguel
+9545-032,Ponta Delgada,Ilha de S�o Miguel
+9545-036,Ponta Delgada,Ilha de S�o Miguel
+9545-026,Ponta Delgada,Ilha de S�o Miguel
+9555-016,Ponta Delgada,Ilha de S�o Miguel
+9555-040,Ponta Delgada,Ilha de S�o Miguel
+9555-060,Ponta Delgada,Ilha de S�o Miguel
+9500-020,Ponta Delgada,Ilha de S�o Miguel
+9500-076,Ponta Delgada,Ilha de S�o Miguel
+9545-028,Ponta Delgada,Ilha de S�o Miguel
+9500-068,Ponta Delgada,Ilha de S�o Miguel
+9500-015,Ponta Delgada,Ilha de S�o Miguel
+9555-015,Ponta Delgada,Ilha de S�o Miguel
+9545-064,Ponta Delgada,Ilha de S�o Miguel
+9555-047,Ponta Delgada,Ilha de S�o Miguel
+9500-032,Ponta Delgada,Ilha de S�o Miguel
+9500-044,Ponta Delgada,Ilha de S�o Miguel
+9500-082,Ponta Delgada,Ilha de S�o Miguel
+9545-027,Ponta Delgada,Ilha de S�o Miguel
+9500-040,Ponta Delgada,Ilha de S�o Miguel
+9545-053,Ponta Delgada,Ilha de S�o Miguel
+9500-065,Ponta Delgada,Ilha de S�o Miguel
+9500-083,Ponta Delgada,Ilha de S�o Miguel
+9545-021,Ponta Delgada,Ilha de S�o Miguel
+9500-099,Ponta Delgada,Ilha de S�o Miguel
+9555-061,Ponta Delgada,Ilha de S�o Miguel
+9545-025,Ponta Delgada,Ilha de S�o Miguel
+9500-013,Ponta Delgada,Ilha de S�o Miguel
+9500-042,Ponta Delgada,Ilha de S�o Miguel
+9545-056,Ponta Delgada,Ilha de S�o Miguel
+9555-069,Ponta Delgada,Ilha de S�o Miguel
+9500-016,Ponta Delgada,Ilha de S�o Miguel
+9555-023,Ponta Delgada,Ilha de S�o Miguel
+9500-043,Ponta Delgada,Ilha de S�o Miguel
+9500-014,Ponta Delgada,Ilha de S�o Miguel
+9555-041,Ponta Delgada,Ilha de S�o Miguel
+9500-075,Ponta Delgada,Ilha de S�o Miguel
+9545-066,Ponta Delgada,Ilha de S�o Miguel
+9545-011,Ponta Delgada,Ilha de S�o Miguel
+9500-095,Ponta Delgada,Ilha de S�o Miguel
+9500-097,Ponta Delgada,Ilha de S�o Miguel
+9500-070,Ponta Delgada,Ilha de S�o Miguel
+9555-093,Ponta Delgada,Ilha de S�o Miguel
+9545-029,Ponta Delgada,Ilha de S�o Miguel
+9500-022,Ponta Delgada,Ilha de S�o Miguel
+9500-026,Ponta Delgada,Ilha de S�o Miguel
+9500-071,Ponta Delgada,Ilha de S�o Miguel
+9500-096,Ponta Delgada,Ilha de S�o Miguel
+9500-037,Ponta Delgada,Ilha de S�o Miguel
+9545-058,Ponta Delgada,Ilha de S�o Miguel
+9500-027,Ponta Delgada,Ilha de S�o Miguel
+9555-062,Ponta Delgada,Ilha de S�o Miguel
+9555-032,Ponta Delgada,Ilha de S�o Miguel
+9500-081,Ponta Delgada,Ilha de S�o Miguel
+9500-051,Ponta Delgada,Ilha de S�o Miguel
+9555-017,Ponta Delgada,Ilha de S�o Miguel
+9500-088,Ponta Delgada,Ilha de S�o Miguel
+9555-073,Ponta Delgada,Ilha de S�o Miguel
+9545-068,Ponta Delgada,Ilha de S�o Miguel
+9500-038,Ponta Delgada,Ilha de S�o Miguel
+9545-038,Ponta Delgada,Ilha de S�o Miguel
+9500-073,Ponta Delgada,Ilha de S�o Miguel
+9545-062,Ponta Delgada,Ilha de S�o Miguel
+9500-039,Ponta Delgada,Ilha de S�o Miguel
+9555-014,Ponta Delgada,Ilha de S�o Miguel
+9500-028,Ponta Delgada,Ilha de S�o Miguel
+9500-069,Ponta Delgada,Ilha de S�o Miguel
+9500-053,Ponta Delgada,Ilha de S�o Miguel
+9500-021,Ponta Delgada,Ilha de S�o Miguel
+9500-054,Ponta Delgada,Ilha de S�o Miguel
+9555-021,Ponta Delgada,Ilha de S�o Miguel
+9555-033,Ponta Delgada,Ilha de S�o Miguel
+9500-089,Ponta Delgada,Ilha de S�o Miguel
+9500-063,Ponta Delgada,Ilha de S�o Miguel
+9555-018,Ponta Delgada,Ilha de S�o Miguel
+9500-093,Ponta Delgada,Ilha de S�o Miguel
+9500-062,Ponta Delgada,Ilha de S�o Miguel
+9500-035,Ponta Delgada,Ilha de S�o Miguel
+9555-031,Ponta Delgada,Ilha de S�o Miguel
+9500-030,Ponta Delgada,Ilha de S�o Miguel
+9545-020,Ponta Delgada,Ilha de S�o Miguel
+9500-091,Ponta Delgada,Ilha de S�o Miguel
+9500-066,Ponta Delgada,Ilha de S�o Miguel
+9500-052,Ponta Delgada,Ilha de S�o Miguel
+9545-052,Ponta Delgada,Ilha de S�o Miguel
+9555-013,Ponta Delgada,Ilha de S�o Miguel
+9500-010,Ponta Delgada,Ilha de S�o Miguel
+9500-023,Ponta Delgada,Ilha de S�o Miguel
+9545-051,Ponta Delgada,Ilha de S�o Miguel
+9555-075,Ponta Delgada,Ilha de S�o Miguel
+9500-072,Ponta Delgada,Ilha de S�o Miguel
+9545-059,Ponta Delgada,Ilha de S�o Miguel
+9500-060,Ponta Delgada,Ilha de S�o Miguel
+9500-033,Ponta Delgada,Ilha de S�o Miguel
+9555-019,Ponta Delgada,Ilha de S�o Miguel
+9500-045,Ponta Delgada,Ilha de S�o Miguel
+9500-061,Ponta Delgada,Ilha de S�o Miguel
+9555-045,Ponta Delgada,Ilha de S�o Miguel
+9545-024,Ponta Delgada,Ilha de S�o Miguel
+9500-074,Ponta Delgada,Ilha de S�o Miguel
+9500-084,Ponta Delgada,Ilha de S�o Miguel
+9545-063,Ponta Delgada,Ilha de S�o Miguel
+9500-055,Ponta Delgada,Ilha de S�o Miguel
+9500-059,Ponta Delgada,Ilha de S�o Miguel
+9545-061,Ponta Delgada,Ilha de S�o Miguel
+9555-081,Ponta Delgada,Ilha de S�o Miguel
+9555-025,Ponta Delgada,Ilha de S�o Miguel
+9500-086,Ponta Delgada,Ilha de S�o Miguel
+9555-022,Ponta Delgada,Ilha de S�o Miguel
+9500-094,Ponta Delgada,Ilha de S�o Miguel
+9545-060,Ponta Delgada,Ilha de S�o Miguel
+9500-012,Ponta Delgada,Ilha de S�o Miguel
+9555-067,Ponta Delgada,Ilha de S�o Miguel
+9600-063,Ribeira Grande,Ilha de S�o Miguel
+9600-019,Ribeira Grande,Ilha de S�o Miguel
+9625-025,Ribeira Grande,Ilha de S�o Miguel
+9600-057,Ribeira Grande,Ilha de S�o Miguel
+9600-074,Ribeira Grande,Ilha de S�o Miguel
+9600-067,Ribeira Grande,Ilha de S�o Miguel
+9600-069,Ribeira Grande,Ilha de S�o Miguel
+9625-023,Ribeira Grande,Ilha de S�o Miguel
+9600-092,Ribeira Grande,Ilha de S�o Miguel
+9600-083,Ribeira Grande,Ilha de S�o Miguel
+9600-077,Ribeira Grande,Ilha de S�o Miguel
+9600-068,Ribeira Grande,Ilha de S�o Miguel
+9600-055,Ribeira Grande,Ilha de S�o Miguel
+9600-061,Ribeira Grande,Ilha de S�o Miguel
+9625-032,Ribeira Grande,Ilha de S�o Miguel
+9600-093,Ribeira Grande,Ilha de S�o Miguel
+9600-051,Ribeira Grande,Ilha de S�o Miguel
+9600-091,Ribeira Grande,Ilha de S�o Miguel
+9600-072,Ribeira Grande,Ilha de S�o Miguel
+9600-054,Ribeira Grande,Ilha de S�o Miguel
+9600-081,Ribeira Grande,Ilha de S�o Miguel
+9600-016,Ribeira Grande,Ilha de S�o Miguel
+9600-062,Ribeira Grande,Ilha de S�o Miguel
+9600-095,Ribeira Grande,Ilha de S�o Miguel
+9600-053,Ribeira Grande,Ilha de S�o Miguel
+9600-084,Ribeira Grande,Ilha de S�o Miguel
+9600-075,Ribeira Grande,Ilha de S�o Miguel
+9625-021,Ribeira Grande,Ilha de S�o Miguel
+9600-022,Ribeira Grande,Ilha de S�o Miguel
+9600-085,Ribeira Grande,Ilha de S�o Miguel
+9625-026,Ribeira Grande,Ilha de S�o Miguel
+9600-097,Ribeira Grande,Ilha de S�o Miguel
+9625-022,Ribeira Grande,Ilha de S�o Miguel
+9600-017,Ribeira Grande,Ilha de S�o Miguel
+9625-028,Ribeira Grande,Ilha de S�o Miguel
+9600-089,Ribeira Grande,Ilha de S�o Miguel
+9600-078,Ribeira Grande,Ilha de S�o Miguel
+9600-058,Ribeira Grande,Ilha de S�o Miguel
+9600-086,Ribeira Grande,Ilha de S�o Miguel
+9600-071,Ribeira Grande,Ilha de S�o Miguel
+9625-034,Ribeira Grande,Ilha de S�o Miguel
+9600-012,Ribeira Grande,Ilha de S�o Miguel
+9600-070,Ribeira Grande,Ilha de S�o Miguel
+9600-079,Ribeira Grande,Ilha de S�o Miguel
+9600-087,Ribeira Grande,Ilha de S�o Miguel
+9625-060,Ribeira Grande,Ilha de S�o Miguel
+9600-082,Ribeira Grande,Ilha de S�o Miguel
+9600-076,Ribeira Grande,Ilha de S�o Miguel
+9600-015,Ribeira Grande,Ilha de S�o Miguel
+9625-031,Ribeira Grande,Ilha de S�o Miguel
+9600-098,Ribeira Grande,Ilha de S�o Miguel
+9600-056,Ribeira Grande,Ilha de S�o Miguel
+9600-059,Ribeira Grande,Ilha de S�o Miguel
+9600-018,Ribeira Grande,Ilha de S�o Miguel
+9625-029,Ribeira Grande,Ilha de S�o Miguel
+9600-088,Ribeira Grande,Ilha de S�o Miguel
+9600-060,Ribeira Grande,Ilha de S�o Miguel
+9625-030,Ribeira Grande,Ilha de S�o Miguel
+9600-065,Ribeira Grande,Ilha de S�o Miguel
+9600-021,Ribeira Grande,Ilha de S�o Miguel
+9600-064,Ribeira Grande,Ilha de S�o Miguel
+9600-090,Ribeira Grande,Ilha de S�o Miguel
+9625-033,Ribeira Grande,Ilha de S�o Miguel
+9560-073,Lagoa,Ilha de S�o Miguel
+9560-013,Lagoa,Ilha de S�o Miguel
+9560-022,Lagoa,Ilha de S�o Miguel
+9560-070,Lagoa,Ilha de S�o Miguel
+9560-052,Lagoa,Ilha de S�o Miguel
+9560-037,Lagoa,Ilha de S�o Miguel
+9560-041,Lagoa,Ilha de S�o Miguel
+9560-024,Lagoa,Ilha de S�o Miguel
+9560-087,Lagoa,Ilha de S�o Miguel
+9560-077,Lagoa,Ilha de S�o Miguel
+9560-061,Lagoa,Ilha de S�o Miguel
+9560-038,Lagoa,Ilha de S�o Miguel
+9560-080,Lagoa,Ilha de S�o Miguel
+9560-050,Lagoa,Ilha de S�o Miguel
+9560-042,Lagoa,Ilha de S�o Miguel
+9560-086,Lagoa,Ilha de S�o Miguel
+9560-035,Lagoa,Ilha de S�o Miguel
+9560-082,Lagoa,Ilha de S�o Miguel
+9560-048,Lagoa,Ilha de S�o Miguel
+9560-084,Lagoa,Ilha de S�o Miguel
+9560-064,Lagoa,Ilha de S�o Miguel
+9560-067,Lagoa,Ilha de S�o Miguel
+9560-094,Lagoa,Ilha de S�o Miguel
+9560-020,Lagoa,Ilha de S�o Miguel
+9560-095,Lagoa,Ilha de S�o Miguel
+9560-083,Lagoa,Ilha de S�o Miguel
+9560-053,Lagoa,Ilha de S�o Miguel
+9560-055,Lagoa,Ilha de S�o Miguel
+9560-026,Lagoa,Ilha de S�o Miguel
+9560-031,Lagoa,Ilha de S�o Miguel
+9560-057,Lagoa,Ilha de S�o Miguel
+9560-036,Lagoa,Ilha de S�o Miguel
+9560-017,Lagoa,Ilha de S�o Miguel
+9560-090,Lagoa,Ilha de S�o Miguel
+9560-096,Lagoa,Ilha de S�o Miguel
+9560-089,Lagoa,Ilha de S�o Miguel
+9560-027,Lagoa,Ilha de S�o Miguel
+9560-014,Lagoa,Ilha de S�o Miguel
+9560-051,Lagoa,Ilha de S�o Miguel
+9560-029,Lagoa,Ilha de S�o Miguel
+9560-039,Lagoa,Ilha de S�o Miguel
+9560-078,Lagoa,Ilha de S�o Miguel
+9560-088,Lagoa,Ilha de S�o Miguel
+9560-063,Lagoa,Ilha de S�o Miguel
+9560-011,Lagoa,Ilha de S�o Miguel
+9560-010,Lagoa,Ilha de S�o Miguel
+9560-043,Lagoa,Ilha de S�o Miguel
+9560-060,Lagoa,Ilha de S�o Miguel
+9560-062,Lagoa,Ilha de S�o Miguel
+9560-059,Lagoa,Ilha de S�o Miguel
+9560-046,Lagoa,Ilha de S�o Miguel
+9560-091,Lagoa,Ilha de S�o Miguel
+9560-099,Lagoa,Ilha de S�o Miguel
+9560-079,Lagoa,Ilha de S�o Miguel
+9560-098,Lagoa,Ilha de S�o Miguel
+9560-065,Lagoa,Ilha de S�o Miguel
+9560-075,Lagoa,Ilha de S�o Miguel
+9560-081,Lagoa,Ilha de S�o Miguel
+9560-058,Lagoa,Ilha de S�o Miguel
+9560-047,Lagoa,Ilha de S�o Miguel
+9560-015,Lagoa,Ilha de S�o Miguel
+9560-071,Lagoa,Ilha de S�o Miguel
+9560-074,Lagoa,Ilha de S�o Miguel
+9560-049,Lagoa,Ilha de S�o Miguel
+9680-027,Vila Franca do Campo,Ilha de S�o Miguel
+9680-024,Vila Franca do Campo,Ilha de S�o Miguel
+9680-017,Vila Franca do Campo,Ilha de S�o Miguel
+9680-019,Vila Franca do Campo,Ilha de S�o Miguel
+9680-018,Vila Franca do Campo,Ilha de S�o Miguel
+9680-022,Vila Franca do Campo,Ilha de S�o Miguel
+9680-025,Vila Franca do Campo,Ilha de S�o Miguel
+9680-026,Vila Franca do Campo,Ilha de S�o Miguel
+9680-016,Vila Franca do Campo,Ilha de S�o Miguel
+9680-021,Vila Franca do Campo,Ilha de S�o Miguel
+8125-602,Loul�,Faro
+8100-512,Loul�,Faro
+8100-330,Loul�,Faro
+8800-124,Tavira,Faro
+8125-135,Loul�,Faro
+3040-630,Coimbra,Coimbra
+2435-683,Our�m,Santar�m
+9060-204,Funchal,Ilha da Madeira
+9000-011,Funchal,Ilha da Madeira
+9020-037,Funchal,Ilha da Madeira
+9050-221,Funchal,Ilha da Madeira
+9060-027,Funchal,Ilha da Madeira
+9020-148,Funchal,Ilha da Madeira
+9060-429,Funchal,Ilha da Madeira
+9000-117,Funchal,Ilha da Madeira
+9050-099,Funchal,Ilha da Madeira
+9020-119,Funchal,Ilha da Madeira
+9060-246,Funchal,Ilha da Madeira
+9020-422,Funchal,Ilha da Madeira
+9020-121,Funchal,Ilha da Madeira
+9020-259,Funchal,Ilha da Madeira
+9050-095,Funchal,Ilha da Madeira
+9020-151,Funchal,Ilha da Madeira
+9020-128,Funchal,Ilha da Madeira
+9020-132,Funchal,Ilha da Madeira
+9020-191,Funchal,Ilha da Madeira
+9050-014,Funchal,Ilha da Madeira
+9060-174,Funchal,Ilha da Madeira
+9020-349,Funchal,Ilha da Madeira
+9020-214,Funchal,Ilha da Madeira
+9050-022,Funchal,Ilha da Madeira
+9000-211,Funchal,Ilha da Madeira
+9050-097,Funchal,Ilha da Madeira
+9000-155,Funchal,Ilha da Madeira
+9060-082,Funchal,Ilha da Madeira
+9020-201,Funchal,Ilha da Madeira
+9000-619,Funchal,Ilha da Madeira
+9020-097,Funchal,Ilha da Madeira
+9060-141,Funchal,Ilha da Madeira
+9050-458,Funchal,Ilha da Madeira
+9050-085,Funchal,Ilha da Madeira
+9060-313,Funchal,Ilha da Madeira
+9020-270,Funchal,Ilha da Madeira
+9050-072,Funchal,Ilha da Madeira
+9020-149,Funchal,Ilha da Madeira
+9020-391,Funchal,Ilha da Madeira
+9000-069,Funchal,Ilha da Madeira
+9060-173,Funchal,Ilha da Madeira
+9050-218,Funchal,Ilha da Madeira
+9000-653,Funchal,Ilha da Madeira
+9020-129,Funchal,Ilha da Madeira
+9020-004,Funchal,Ilha da Madeira
+9060-395,Funchal,Ilha da Madeira
+9000-224,Funchal,Ilha da Madeira
+9060-400,Funchal,Ilha da Madeira
+9020-343,Funchal,Ilha da Madeira
+9020-234,Funchal,Ilha da Madeira
+9050-219,Funchal,Ilha da Madeira
+9060-007,Funchal,Ilha da Madeira
+9270-156,Porto Moniz,Ilha da Madeira
+9360-531,Ponta do Sol,Ilha da Madeira
+9360-554,Ponta do Sol,Ilha da Madeira
+9360-576,Ponta do Sol,Ilha da Madeira
+9360-572,Ponta do Sol,Ilha da Madeira
+9240-121,S�o Vicente,Ilha da Madeira
+9300-047,C�mara de Lobos,Ilha da Madeira
+9370-083,Calheta,Ilha da Madeira
+9370-546,Calheta,Ilha da Madeira
+9400-134,Porto Santo,Ilha de Porto Santo
+9400-129,Porto Santo,Ilha de Porto Santo
+9400-220,Porto Santo,Ilha de Porto Santo
+9400-231,Porto Santo,Ilha de Porto Santo
+9400-194,Porto Santo,Ilha de Porto Santo
+9400-100,Porto Santo,Ilha de Porto Santo
+9400-168,Porto Santo,Ilha de Porto Santo
+9400-141,Porto Santo,Ilha de Porto Santo
+9400-179,Porto Santo,Ilha de Porto Santo
+9400-055,Porto Santo,Ilha de Porto Santo
+9400-128,Porto Santo,Ilha de Porto Santo
+9400-234,Porto Santo,Ilha de Porto Santo
+9580-012,Vila do Porto,Ilha de Santa Maria
+9400-185,Porto Santo,Ilha de Porto Santo
+9580-030,Vila do Porto,Ilha de Santa Maria
+9580-011,Vila do Porto,Ilha de Santa Maria
+9580-024,Vila do Porto,Ilha de Santa Maria
+9580-019,Vila do Porto,Ilha de Santa Maria
+9580-018,Vila do Porto,Ilha de Santa Maria
+9630-049,Nordeste,Ilha de S�o Miguel
+9630-016,Nordeste,Ilha de S�o Miguel
+9630-082,Nordeste,Ilha de S�o Miguel
+9630-019,Nordeste,Ilha de S�o Miguel
+9630-050,Nordeste,Ilha de S�o Miguel
+9630-083,Nordeste,Ilha de S�o Miguel
+9630-051,Nordeste,Ilha de S�o Miguel
+9630-045,Nordeste,Ilha de S�o Miguel
+9630-043,Nordeste,Ilha de S�o Miguel
+9630-042,Nordeste,Ilha de S�o Miguel
+9630-087,Nordeste,Ilha de S�o Miguel
+9630-081,Nordeste,Ilha de S�o Miguel
+9630-021,Nordeste,Ilha de S�o Miguel
+9630-086,Nordeste,Ilha de S�o Miguel
+9630-044,Nordeste,Ilha de S�o Miguel
+9630-090,Nordeste,Ilha de S�o Miguel
+9630-014,Nordeste,Ilha de S�o Miguel
+9630-091,Nordeste,Ilha de S�o Miguel
+9675-038,Povoa��o,Ilha de S�o Miguel
+9675-057,Povoa��o,Ilha de S�o Miguel
+9650-018,Povoa��o,Ilha de S�o Miguel
+9650-022,Povoa��o,Ilha de S�o Miguel
+9675-024,Povoa��o,Ilha de S�o Miguel
+9675-058,Povoa��o,Ilha de S�o Miguel
+9675-064,Povoa��o,Ilha de S�o Miguel
+9675-052,Povoa��o,Ilha de S�o Miguel
+9675-040,Povoa��o,Ilha de S�o Miguel
+9675-041,Povoa��o,Ilha de S�o Miguel
+9675-069,Povoa��o,Ilha de S�o Miguel
+9675-042,Povoa��o,Ilha de S�o Miguel
+9560-068,Lagoa,Ilha de S�o Miguel

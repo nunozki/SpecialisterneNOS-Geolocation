@@ -42,7 +42,7 @@ def save_to_database(postal_code, municipality, district):
         # Format
         formatted_postal_code = f"{postal_code[:4]}-{postal_code[4:]}"
         log_invalid_postal_code(formatted_postal_code)
-        return  # Não insira nada se houver valores NULL
+        return
 
     try:
         # Format
@@ -50,7 +50,6 @@ def save_to_database(postal_code, municipality, district):
 
         with sqlite3.connect('codigos_postais_database.db') as conn:
             cursor = conn.cursor()
-            # Verifica se a tabela existe, se não, cria
             cursor.execute("""CREATE TABLE IF NOT EXISTS postal_codes (
                 codigo_postal VARCHAR(8) PRIMARY KEY,
                 concelho VARCHAR(255),
@@ -130,7 +129,7 @@ def enrich_data(df):
             if municipality is not None and district is not None:
                 enriched_data.append((df.iloc[i, 0].split(',')[0], municipality, district))
             else:
-                enriched_data.append((df.iloc[i, 0].split(',')[0], 'Unknown', 'Unknown'))  # Or log a warning
+                enriched_data.append((df.iloc[i, 0].split(',')[0], 'Unknown', 'Unknown'))
     logging.info(f"Enriched data to save: {enriched_data}")
     return enriched_data
 
