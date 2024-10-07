@@ -4,17 +4,20 @@ import logging
 import sqlite3
 import locale
 import time
+import sys
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
-from flask import Flask, jsonify
 
 locale.setlocale(locale.LC_ALL, 'pt_PT.UTF-8')
 
 # Configure logging at the beginning of your script
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
-                    filename='app.log',  # Log to a file named 'app.log'
+                    filename='test_report.log',  # Log to a file named 'app.log'
                     filemode='a')  # Append mode
+
+# File to store invalid postal codes
+INVALID_POSTAL_CODES_FILE = 'codigos_postais_invalidos.csv'
 
 # Function to read the CSV file
 def read_csv(file_path):
@@ -33,10 +36,16 @@ def handle_response(response, postal_code):
 
 # Function to save enriched data to a database
 def save_to_database(postal_code, municipality, district):
+    if municipality is None or district is None:
+        logging.warning(f"Skipping insertion for postal code {postal_code} due to NULL values.")
+        # Register invalid postal codes
+        log_invalid_postal_code(postal_code)
+        return  # Não insira nada se houver valores NULL
+
     try:
         # Formatar o código postal com um hífen
         formatted_postal_code = f"{postal_code[:4]}-{postal_code[4:]}"
-        
+
         with sqlite3.connect('codigos_postais_database.db') as conn:
             cursor = conn.cursor()
             # Verifica se a tabela existe, se não, cria
@@ -52,6 +61,12 @@ def save_to_database(postal_code, municipality, district):
                 logging.warning(f"Postal code {formatted_postal_code} already exists in the database.")
     except sqlite3.Error as e:
         logging.error(f"Database connection error: {e}")
+
+# Function to log invalid postal codes
+def log_invalid_postal_code(postal_code):
+    with open(INVALID_POSTAL_CODES_FILE, 'a', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([postal_code])  # Write the invalid postal code
 
 # Function to get municipality and district information
 def get_municipality_and_district(postal_code, max_retries=3):
@@ -117,21 +132,6 @@ def enrich_data(df):
     logging.info(f"Enriched data to save: {enriched_data}")
     return enriched_data
 
-# Create a Flask app
-def create_app():
-    app = Flask(__name__)
-
-    @app.route('/postal_codes', methods=['GET'])
-    def get_postal_codes():
-        conn = sqlite3.connect('codigos_postais_database.db')
-        cursor = conn.cursor()
-        cursor.execute("SELECT * FROM postal_codes")
-        data = cursor.fetchall()
-        conn.close()
-        return jsonify([{"codigo_postal": row[0], "concelho": row[1], "distrito": row[2]} for row in data])
-
-    return app
-
 # Function to export data to a new CSV file
 def export_to_csv():
     conn = sqlite3.connect('codigos_postais_database.db')
@@ -145,94 +145,11 @@ def export_to_csv():
         writer.writerow(['Código Postal', 'Município', 'Distrito'])
         writer.writerows(data)
 
-# Function to export the test report to a text file
-def export_test_report(test_cases, test_results, defects):
-    with open('relatorio_de_testes.txt', 'w') as f:
-        f.write("Test Report:\n")
-        f.write("------------\n")
-        for test_case in test_cases:
-            f.write(f"Test Case: {test_case['test_case']}\n")
-            f.write(f"Functionality: {test_case['functionality']}\n")
-            f.write(f"Actions: {test_case['actions']}\n")
-            f.write(f"Expected Result: {test_case['expected_result']}\n\n")
-
-        f.write("Test Results:\n")
-        f.write("------------\n")
-        for test_result in test_results:
-            f.write(f"Test Case: {test_result['test_case']}\n")
-            f.write(f"Result: {test_result['result']}\n\n")
-
-        f.write("Defects:\n")
-        f.write("--------\n")
-        for defect in defects:
-            f.write(f"Defect: {defect['defect']}\n")
-            f.write(f"Severity: {defect['severity']}\n")
-            f.write(f"Description: {defect['description']}\n")
-            f.write(f"Resolution Status: {defect['resolution_status']}\n\n")
-
 # Main execution flow
 if __name__ == '__main__':
     df = read_csv('codigos_postais.csv')
     enriched_data = enrich_data(df)
 
-    app = create_app()
-    app.run(debug=True)
-
     export_to_csv()
 
-    # Define your test cases, results, and defects
-    test_cases = [
-        {
-            'test_case': 'Validate Postal Code Format',
-            'functionality': 'Check if the postal code is formatted correctly',
-            'actions': 'Input a postal code with invalid characters',
-            'expected_result': 'Receive an error message indicating invalid format'
-        },
-        {
-            'test_case': 'Fetch Municipality and District',
-            'functionality': 'API call to fetch data based on postal code',
-            'actions': 'Input a valid postal code',
-            'expected_result': 'Receive correct municipality and district data'
-        },
-        {
-            'test_case': 'Database Insertion',
-            'functionality': 'Save enriched data to the database',
-            'actions': 'Insert a valid record into the database',
-            'expected_result': 'Record should be saved without errors'
-        }
-    ]
-
-    test_results = [
-        {
-            'test_case': 'Validate Postal Code Format',
-            'result': 'Passed',
-            'notes': 'Error message displayed correctly for invalid formats.'
-        },
-        {
-            'test_case': 'Fetch Municipality and District',
-            'result': 'Failed',
-            'notes': 'API returned a 404 error for an existing postal code.'
-        },
-        {
-            'test_case': 'Database Insertion',
-            'result': 'Passed',
-            'notes': 'Record saved successfully without errors.'
-        }
-    ]
-
-    defects = [
-        {
-            'defect': 'API Failure for Certain Postal Codes',
-            'severity': 'High',
-            'description': 'The API returns a 404 for certain valid postal codes.',
-            'resolution_status': 'Open'
-        },
-        {
-            'defect': 'Database Insertion Error',
-            'severity': 'Medium',
-            'description': 'Occasional database insertion errors due to constraints.',
-            'resolution_status': 'In Progress'
-        }
-    ]
-
-    export_test_report(test_cases, test_results, defects)
+    sys.exit()
