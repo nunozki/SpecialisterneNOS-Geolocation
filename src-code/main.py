@@ -39,11 +39,13 @@ def save_to_database(postal_code, municipality, district):
     if municipality is None or district is None:
         logging.warning(f"Skipping insertion for postal code {postal_code} due to NULL values.")
         # Register invalid postal codes
-        log_invalid_postal_code(postal_code)
+        # Format
+        formatted_postal_code = f"{postal_code[:4]}-{postal_code[4:]}"
+        log_invalid_postal_code(formatted_postal_code)
         return  # Não insira nada se houver valores NULL
 
     try:
-        # Formatar o código postal com um hífen
+        # Format
         formatted_postal_code = f"{postal_code[:4]}-{postal_code[4:]}"
 
         with sqlite3.connect('codigos_postais_database.db') as conn:
@@ -63,10 +65,10 @@ def save_to_database(postal_code, municipality, district):
         logging.error(f"Database connection error: {e}")
 
 # Function to log invalid postal codes
-def log_invalid_postal_code(postal_code):
+def log_invalid_postal_code(formatted_postal_code):
     with open(INVALID_POSTAL_CODES_FILE, 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([postal_code])  # Write the invalid postal code
+        writer.writerow([formatted_postal_code])  # Write the invalid postal code
 
 # Function to get municipality and district information
 def get_municipality_and_district(postal_code, max_retries=3):
