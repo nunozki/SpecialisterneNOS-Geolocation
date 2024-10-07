@@ -31,8 +31,30 @@ def handle_response(response, postal_code):
         logging.error(f"Error fetching data for postal code: {postal_code} - Status code: {response.status_code}")
     return None, None
 
+# Function to save enriched data to a database
+def save_to_database(postal_code, municipality, district):
+    try:
+        # Formatar o código postal com um hífen
+        formatted_postal_code = f"{postal_code[:4]}-{postal_code[4:]}"
+        
+        with sqlite3.connect('codigos_postais_database.db') as conn:
+            cursor = conn.cursor()
+            # Verifica se a tabela existe, se não, cria
+            cursor.execute("""CREATE TABLE IF NOT EXISTS postal_codes (
+                codigo_postal VARCHAR(8) PRIMARY KEY,
+                concelho VARCHAR(255),
+                distrito VARCHAR(255)
+            )""")
+            try:
+                cursor.execute("INSERT INTO postal_codes (codigo_postal, concelho, distrito) VALUES (?, ?, ?)",
+                               (formatted_postal_code, municipality, district))
+            except sqlite3.IntegrityError:
+                logging.warning(f"Postal code {formatted_postal_code} already exists in the database.")
+    except sqlite3.Error as e:
+        logging.error(f"Database connection error: {e}")
+
 # Function to get municipality and district information
-def get_municipality_and_district(postal_code, max_retries = 3):
+def get_municipality_and_district(postal_code, max_retries=3):
     logging.info(f"Fetching data for postal code: {postal_code}")
     postal_code = postal_code.strip().replace(",", "").replace(" ", "").replace("-", "").zfill(7)
 
@@ -42,15 +64,35 @@ def get_municipality_and_district(postal_code, max_retries = 3):
 
     cp4, cp3 = postal_code[:4], postal_code[4:]
     url = f"https://www.cttcodigopostal.pt/api/v1/d7a547afb5e44e9d93ad7ac31670a32b/{cp4}-{cp3}"
+
+    # Define a variable to keep track of request count and time
+    if not hasattr(get_municipality_and_district, "request_count"):
+        get_municipality_and_district.request_count = 0
+        get_municipality_and_district.start_time = time.time()
+
+    # Check if the maximum request limit has been reached
+    if get_municipality_and_district.request_count >= 30:
+        elapsed_time = time.time() - get_municipality_and_district.start_time
+        if elapsed_time < 60:  # If less than a minute has passed
+            wait_time = 60 - elapsed_time
+            logging.info(f"Rate limit reached. Waiting for {wait_time:.2f} seconds.")
+            time.sleep(wait_time)  # Wait until a minute has passed
+        # Reset the counter and start time
+        get_municipality_and_district.request_count = 0
+        get_municipality_and_district.start_time = time.time()
     
     for attempt in range(max_retries):
         time.sleep(2)  # Wait 2 seconds between requests to respect the rate limit
         try:
             response = requests.get(url)
+            # Increment the request count
+            get_municipality_and_district.request_count += 1
             # Use the handle_response function here
             result = handle_response(response, postal_code)
             if result is not None:  # Successful response
-                return result
+                municipality, district = result
+                save_to_database(postal_code, municipality, district)  # Save to database
+                return municipality, district
         except requests.exceptions.RequestException as e:
             logging.error(f"HTTP request failed: {e}")
             if attempt == max_retries - 1:  # Last attempt
@@ -72,18 +114,8 @@ def enrich_data(df):
                 enriched_data.append((df.iloc[i, 0].split(',')[0], municipality, district))
             else:
                 enriched_data.append((df.iloc[i, 0].split(',')[0], 'Unknown', 'Unknown'))  # Or log a warning
-    logging.info(f"Enriched data: {enriched_data}")
+    logging.info(f"Enriched data to save: {enriched_data}")
     return enriched_data
-
-# Function to save enriched data to a database
-def save_to_database(enriched_data):
-    with sqlite3.connect('codigos_postais_database.db') as conn:
-        cursor = conn.cursor()
-        for row in enriched_data:
-            try:
-                cursor.execute("INSERT INTO postal_codes VALUES (?, ?, ?)", row)
-            except sqlite3.Error as e:
-                logging.error(f"Error inserting data: {e}")
 
 # Create a Flask app
 def create_app():
@@ -91,17 +123,12 @@ def create_app():
 
     @app.route('/postal_codes', methods=['GET'])
     def get_postal_codes():
-        try:
-            with sqlite3.connect('codigos_postais_database.db') as conn:
-                cursor = conn.cursor()
-                cursor.execute("SELECT * FROM postal_codes")
-                data = cursor.fetchall()
-                if not data:
-                    return jsonify({"message": "No postal codes found."}), 404
-                return jsonify([dict(row) for row in data])
-        except Exception as e:
-            logging.error(f"Database error: {e}")
-            return jsonify({"message": "Error retrieving postal codes."}), 500
+        conn = sqlite3.connect('codigos_postais_database.db')
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM postal_codes")
+        data = cursor.fetchall()
+        conn.close()
+        return jsonify([{"codigo_postal": row[0], "concelho": row[1], "distrito": row[2]} for row in data])
 
     return app
 
@@ -147,7 +174,6 @@ def export_test_report(test_cases, test_results, defects):
 if __name__ == '__main__':
     df = read_csv('codigos_postais.csv')
     enriched_data = enrich_data(df)
-    save_to_database(enriched_data)
 
     app = create_app()
     app.run(debug=True)
