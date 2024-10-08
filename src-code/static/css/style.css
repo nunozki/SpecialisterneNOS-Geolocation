@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; /* Largura fixa para o campo de entrada */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+button:hover {
+    background-color: #218838; /* Cor do botão ao passar o mouse */
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.error {
+    color: red; /* Cor do texto de erro */
+}
+
+.success {
+    color: green; /* Cor do texto de sucesso */
+}

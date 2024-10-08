@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Código Postal</title>
+    <style>
+        /* CSS embutido */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px; /* Largura fixa para o campo de entrada */
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            transition: background-color 0.3s ease; /* Transição suave */
+        }
+
+        button:hover {
+            background-color: #218838; /* Cor do botão ao passar o mouse */
+        }
+
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        .error {
+            color: red; /* Cor do texto de erro */
+        }
+
+        .success {
+            color: green; /* Cor do texto de sucesso */
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique seu Código Postal</h1>
+    <input type="text" id="postalCodeInput" placeholder="Digite o código postal">
+    <button id="verificarCodigoPostal">Verificar Código Postal</button>
+
+    <div id="resultado" class="resultado"></div>
+
+    <script>
+        // JavaScript embutido
+        document.getElementById('verificarCodigoPostal').addEventListener('click', function() {
+            const postalCode = document.getElementById('postalCodeInput').value.trim();
+
+            if (!postalCode) {
+                document.getElementById('resultado').innerText = 'Por favor, insira um código postal.';
+                return;
+            }
+
+            fetch('/verify_postal_code', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ postal_code: postalCode })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(errData => {
+                        throw new Error(errData.message || 'Erro na requisição');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('resultado').innerText = data.message;
+                document.getElementById('resultado').classList.add('success');
+                document.getElementById('resultado').classList.remove('error');
+            })
+            .catch(error => {
+                console.error('Erro de rede ou servidor:', error);
+                document.getElementById('resultado').innerText = 'Erro: ' + error.message;
+                document.getElementById('resultado').classList.add('error');
+                document.getElementById('resultado').classList.remove('success');
+            })
+            .finally(() => {
+                document.getElementById('postalCodeInput').value = '';
+            });
+        });
+    </script>
+</body>
+</html>

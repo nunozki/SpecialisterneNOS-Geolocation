@@ -1,0 +1,7 @@
+Ctrl + C: Encerrar o programa
+
+http://127.0.0.1:5000/postal_codes
+
+http://localhost:5000/
+
+Se criar uma base de dados e ficheiros .csv do zero, poderá demorar horas... Aconselho copiar os existentes (exceto o tem original no nome) para dentro do src-code.

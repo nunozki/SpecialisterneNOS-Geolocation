@@ -5,7 +5,9 @@ import sqlite3
 import locale
 import time
 import sys
+import os
 import pandas as pd
+from flask import Flask, request, render_template, jsonify
 from concurrent.futures import ThreadPoolExecutor
 
 locale.setlocale(locale.LC_ALL, 'pt_PT.UTF-8')
@@ -19,9 +21,120 @@ logging.basicConfig(level=logging.INFO,
 # File to store invalid postal codes
 INVALID_POSTAL_CODES_FILE = 'codigos_postais_invalidos.csv'
 
+app = Flask(__name__, static_url_path='', static_folder='src-code')
+
 # Function to read the CSV file
 def read_csv(file_path):
     return pd.read_csv(file_path)
+
+# Function to check if the file exists and has data
+def check_file(file_path):
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        logging.info(f"The file '{file_path}' exists and contains data.")
+        return True
+    else:
+        logging.warning(f"The file '{file_path}' does not exist or is empty.")
+        return False
+    
+# Function to read invalid postal codes from the CSV file
+def read_invalid_postal_codes():
+    try:
+        invalid_postal_codes = pd.read_csv(INVALID_POSTAL_CODES_FILE, header=None)
+        return set(invalid_postal_codes[0].str.strip())
+    except FileNotFoundError:
+        logging.error(f"The file '{INVALID_POSTAL_CODES_FILE}' was not found.")
+        return set()
+
+# Function to check if the postal code is in the enriched CSV file
+def check_enriched_postal_code(postal_code):
+    try:
+        enriched_data = pd.read_csv('codigos_postais_enriched.csv')
+        if postal_code in enriched_data['Código Postal'].values:
+            logging.info(f"Postal code {postal_code} found in enriched data.")
+            return True
+        else:
+            logging.info(f"Postal code {postal_code} not found in enriched data.")
+            return False
+    except FileNotFoundError:
+        logging.error("The file 'codigos_postais_enriched.csv' was not found.")
+        return False
+    
+    # Function to check if the postal code is in the SQLite database
+def check_database_postal_code(postal_code):
+    try:
+        with sqlite3.connect('codigos_postais_database.db') as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM postal_codes WHERE codigo_postal=?", (postal_code,))
+            result = cursor.fetchone()
+            if result:
+                logging.info(f"Postal code {postal_code} found in the database.")
+                return True
+            else:
+                logging.info(f"Postal code {postal_code} not found in the database.")
+                return False
+    except sqlite3.Error as e:
+        logging.error(f"Database error: {e}")
+        return False
+    
+# Function to enrich postal codes and export them to CSV
+def enrich_and_export_data():
+    # Enrichment process will only run if files do not exist or are empty
+    if not (check_file('codigos_postais_invalidos.csv') and 
+            check_file('codigos_postais_enriched.csv') and 
+            check_file('codigos_postais_database.db')):
+        
+        logging.info("Files are missing or empty. Enriching and exporting data.")
+        
+        # Assume these functions are defined elsewhere
+        df = pd.read_csv('codigos_postais.csv')  # Read main postal code CSV
+        enriched_data = enrich_data(df)  # Enrich the data
+        export_to_csv(enriched_data)  # Export enriched data to CSV
+        
+        logging.info("Data enrichment and export completed.")
+    else:
+        logging.info("Files exist and contain data. Skipping enrichment and export process.")
+        get_user_postal_code()
+    
+# Function to check the validity of a postal code
+def check_postal_code_validity(postal_code):
+    # Check if the files exist and contain data
+    files_exist = check_file('codigos_postais_invalidos.csv') and \
+                  check_file('codigos_postais_enriched.csv') and \
+                  check_file('codigos_postais_database.db')
+
+    if not files_exist:
+        logging.error("One or more required files do not exist or are empty.")
+        return False
+
+    # Load invalid postal codes
+    invalid_postal_codes = read_invalid_postal_codes()
+
+    # Check if the postal code is invalid
+    if postal_code in invalid_postal_codes:
+        logging.info(f"Postal code {postal_code} is invalid (found in 'codigos_postais_invalidos.csv').")
+        return False
+
+    # Check if the postal code exists in enriched CSV or database
+    if check_enriched_postal_code(postal_code) or check_database_postal_code(postal_code):
+        logging.info(f"Postal code {postal_code} is valid.")
+        return True
+    else:
+        logging.info(f"Postal code {postal_code} is invalid (not found in enriched data or database).")
+        return False
+
+# Example usage: Function to get postal code input from user and check its validity
+def get_user_postal_code():
+    print("Please enter a postal code to verify (format: XXXX-XXX): ")
+    postal_code = input().strip()
+    if len(postal_code) != 8 or postal_code[4] != '-' or not postal_code.replace("-", "").isdigit():
+        logging.warning("Invalid postal code format. Expected format is 'XXXX-XXX'.")
+        print("Invalid postal code format. Please use the format 'XXXX-XXX'.")
+        return
+    valid = check_postal_code_validity(postal_code)
+    if valid:
+        print(f"The postal code {postal_code} is valid.")
+    else:
+        print(f"The postal code {postal_code} is invalid.")
 
 def handle_response(response, postal_code):
     if response.status_code == 200:
@@ -146,11 +259,95 @@ def export_to_csv():
         writer.writerow(['Código Postal', 'Município', 'Distrito'])
         writer.writerows(data)
 
+# Function to get data from the SQLite database
+def get_postal_codes():
+    conn = sqlite3.connect('codigos_postais_database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM postal_codes")
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
+
+invalid_postal_codes = set()  
+
+def load_invalid_postal_codes(filename):
+    invalid_postal_codes = set()
+    with open(filename, mode='r', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            invalid_postal_codes.add(row[0].strip())
+    return invalid_postal_codes
+
+@app.route('/')
+def template():
+    return render_template('index.html')
+
+# API endpoint to get all postal codes
+@app.route('/postal_codes', methods=['GET'])
+def get_all_postal_codes():
+    try:
+        postal_codes = get_postal_codes()
+        if postal_codes:
+            return jsonify(postal_codes), 200  # Return the data as JSON with status code 200 (OK)
+        else:
+            return jsonify({"message": "No postal codes found"}), 404  # No data found
+    except sqlite3.Error as e:
+        logging.error(f"Database error: {e}")
+        return jsonify({"error": "Internal Server Error"}), 500  # Return status code 500 (Internal Server Error)
+
+# API endpoint to get postal code by code
+@app.route('/postal_codes/<codigo_postal>', methods=['GET'])
+def get_postal_code(codigo_postal):
+    try:
+        conn = sqlite3.connect('codigos_postais_database.db')
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM postal_codes WHERE codigo_postal=?", (codigo_postal,))
+        postal_code = cursor.fetchone()
+        conn.close()
+        if postal_code:
+            return jsonify(postal_code), 200  # Return the postal code data with status code 200 (OK)
+        else:
+            return jsonify({"message": "Postal code not found"}), 404  # Postal code not found
+    except sqlite3.Error as e:
+        logging.error(f"Database error: {e}")
+        return jsonify({"error": "Internal Server Error"}), 500  # Return status code 500 (Internal Server Error)
+
+invalid_postal_codes = load_invalid_postal_codes(INVALID_POSTAL_CODES_FILE)
+
+@app.route('/verify_postal_code', methods=['POST'])
+def verify_postal_code():
+    data = request.get_json()
+    postal_code = data.get('postal_code', '').strip()
+
+    if len(postal_code) != 8 or postal_code[4] != '-' or not postal_code.replace("-", "").isdigit():
+        logging.warning("Invalid postal code format. Expected format is 'XXXX-XXX'.")
+        return jsonify({'message': 'Formato de código postal inválido.'}), 400
+
+    if postal_code in invalid_postal_codes:
+        return jsonify({'message': 'Código postal inválido.'}), 400
+
+    try:
+        conn = sqlite3.connect('codigos_postais_database.db')
+        cursor = conn.cursor()
+        
+        cursor.execute("SELECT * FROM postal_codes WHERE codigo_postal=?", (postal_code,))
+        postal_code_data = cursor.fetchone()
+        if postal_code_data:
+            logging.info(f"Código postal encontrado: {postal_code_data}")
+            return jsonify({'message': 'Código postal válido.'}), 200
+        
+        logging.warning("Código postal não encontrado no banco de dados.")
+        return jsonify({'message': 'Código postal não encontrado.'}), 404 
+    except sqlite3.Error as e:
+        logging.error(f"Database error: {e}")
+        return jsonify({"error": "Internal Server Error"}), 500
+    finally:
+        conn.close()
+
+
 # Main execution flow
 if __name__ == '__main__':
-    df = read_csv('codigos_postais.csv')
-    enriched_data = enrich_data(df)
 
-    export_to_csv()
-
+    app.run(debug=True)
+    enrich_and_export_data()
     sys.exit()
