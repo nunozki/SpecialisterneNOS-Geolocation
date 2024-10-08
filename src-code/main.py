@@ -84,16 +84,15 @@ def enrich_and_export_data():
             check_file('codigos_postais_database.db')):
         
         logging.info("Files are missing or empty. Enriching and exporting data.")
-        
+
         # Assume these functions are defined elsewhere
         df = pd.read_csv('codigos_postais.csv')  # Read main postal code CSV
         enriched_data = enrich_data(df)  # Enrich the data
         export_to_csv(enriched_data)  # Export enriched data to CSV
-        
         logging.info("Data enrichment and export completed.")
+        
     else:
         logging.info("Files exist and contain data. Skipping enrichment and export process.")
-        get_user_postal_code()
     
 # Function to check the validity of a postal code
 def check_postal_code_validity(postal_code):
@@ -121,20 +120,6 @@ def check_postal_code_validity(postal_code):
     else:
         logging.info(f"Postal code {postal_code} is invalid (not found in enriched data or database).")
         return False
-
-# Example usage: Function to get postal code input from user and check its validity
-def get_user_postal_code():
-    print("Please enter a postal code to verify (format: XXXX-XXX): ")
-    postal_code = input().strip()
-    if len(postal_code) != 8 or postal_code[4] != '-' or not postal_code.replace("-", "").isdigit():
-        logging.warning("Invalid postal code format. Expected format is 'XXXX-XXX'.")
-        print("Invalid postal code format. Please use the format 'XXXX-XXX'.")
-        return
-    valid = check_postal_code_validity(postal_code)
-    if valid:
-        print(f"The postal code {postal_code} is valid.")
-    else:
-        print(f"The postal code {postal_code} is invalid.")
 
 def handle_response(response, postal_code):
     if response.status_code == 200:
@@ -312,12 +297,12 @@ def get_postal_code(codigo_postal):
         logging.error(f"Database error: {e}")
         return jsonify({"error": "Internal Server Error"}), 500  # Return status code 500 (Internal Server Error)
 
-invalid_postal_codes = load_invalid_postal_codes(INVALID_POSTAL_CODES_FILE)
-
 @app.route('/verify_postal_code', methods=['POST'])
 def verify_postal_code():
     data = request.get_json()
     postal_code = data.get('postal_code', '').strip()
+
+    invalid_postal_codes = load_invalid_postal_codes(INVALID_POSTAL_CODES_FILE)
 
     if len(postal_code) != 8 or postal_code[4] != '-' or not postal_code.replace("-", "").isdigit():
         logging.warning("Invalid postal code format. Expected format is 'XXXX-XXX'.")
@@ -348,6 +333,6 @@ def verify_postal_code():
 # Main execution flow
 if __name__ == '__main__':
 
-    app.run(debug=True)
     enrich_and_export_data()
+    app.run(debug=True)
     sys.exit()
